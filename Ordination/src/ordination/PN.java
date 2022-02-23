@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class PN {
 
+
     private double antalEnheder;
 
     /**
