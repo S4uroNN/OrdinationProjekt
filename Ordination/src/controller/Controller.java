@@ -69,7 +69,20 @@ public class Controller {
 			LocalDate slutDen, Patient patient, Laegemiddel laegemiddel,
 			LocalTime[] klokkeSlet, double[] antalEnheder) {
 		// TODO
-		return null;
+		if (!checkStartFoerSlut(startDen, slutDen)) {
+			throw new IllegalArgumentException("startdato er efter slutdato");
+		}
+		else if (klokkeSlet.length != antalEnheder.length) {
+			throw new IllegalArgumentException("Antal tidspunkter stemmer ikke med antal ordinationer");
+		}
+		else {
+			DagligSkaev dagligSkaev = new DagligSkaev(startDen, slutDen, patient, laegemiddel, klokkeSlet, antalEnheder);
+			return dagligSkaev;
+
+		}
+
+
+
 	}
 
 	/**
