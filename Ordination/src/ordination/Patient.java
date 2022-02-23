@@ -7,8 +7,6 @@ public class Patient {
     private String navn;
     private double vaegt;
 
-    // TODO: Link til Ordination
-
     private final ArrayList<Ordination> ordinations = new ArrayList<>();
 
     public Patient(String cprnr, String navn, double vaegt) {
@@ -36,7 +34,7 @@ public class Patient {
     public void setVaegt(double vaegt){
         this.vaegt = vaegt;
     }
-    
+
     public ArrayList<Ordination> getOrdinations() {
         return new ArrayList<>(ordinations);
     }
