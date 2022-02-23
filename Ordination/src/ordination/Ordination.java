@@ -8,6 +8,7 @@ public abstract class Ordination {
     private LocalDate slutDen;
 
     // TODO Link til Laegemiddel
+    //Constructor
     public Ordination(LocalDate startDen, LocalDate slutDen){
         this.startDen = startDen;
         this.slutDen = slutDen;
