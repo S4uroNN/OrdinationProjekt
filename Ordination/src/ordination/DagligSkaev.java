@@ -8,9 +8,11 @@ public class DagligSkaev extends Ordination {
     private final ArrayList<Dosis> doser = new ArrayList<>();
 
     public DagligSkaev(LocalDate startDen,
-                       LocalDate slutDen, Patient patient, Laegemiddel laegemiddel,
-                       LocalTime[] klokkeSlet, double[] antalEnheder) {
+                       LocalDate slutDen) {
         super(startDen, slutDen);
+
+
+
     }
 
     @Override
