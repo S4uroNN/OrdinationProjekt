@@ -35,7 +35,7 @@ public class Patient {
         this.vaegt = vaegt;
     }
 
-    public ArrayList<Ordination> getOrdinations() {
+    public ArrayList<Ordination> getOrdinationer() {
         return new ArrayList<>(ordinations);
     }
 
@@ -51,9 +51,11 @@ public class Patient {
     }
 
 
+
     @Override
     public String toString(){
         return navn + "  " + cprnr;
     }
+
 
 }

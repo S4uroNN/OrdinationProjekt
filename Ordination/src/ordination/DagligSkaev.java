@@ -15,20 +15,16 @@ public class DagligSkaev extends Ordination {
 
     @Override
     public double samletDosis() {
-        double tæller = 0;
-        for (Dosis d : doser) {
-            tæller += d.getAntal();
-        }
-        return tæller;
+       return doegnDosis()*antalDage();
     }
 
     @Override
     public double doegnDosis() {
-        double samletdosis = 0;
-        for (int i = 0; i <= antalDage(); i++) {
-            samletdosis += samletDosis();
+        double døgndosis = 0;
+        for(Dosis d : doser){
+            døgndosis += d.getAntal();
         }
-        return samletdosis / antalDage();
+        return døgndosis;
     }
 
     @Override

@@ -1,9 +1,9 @@
 package ordination;
 
-import com.sun.webkit.LoadListenerClient;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class DagligFast extends Ordination {
     private final Dosis[] dosis = new Dosis[4];
@@ -19,27 +19,15 @@ public class DagligFast extends Ordination {
 
     @Override
     public double samletDosis() {
-        double samletdosis = 0;
-        for (Dosis d : dosis) {
-            samletdosis += d.getAntal();
-        }
-        return samletdosis;
+        return doegnDosis() * antalDage();
     }
 
     @Override
     public double doegnDosis() {
-        double samletdosis = 0;
         double døgndosis = 0;
-
-        if(antalDage()<1){
-            for (int i = 0; i <= antalDage(); i++) {
-                samletdosis += samletDosis();
-            }
-            døgndosis = samletdosis/antalDage();
-        }else{
-            døgndosis = samletdosis;
+        for (Dosis d : dosis) {
+            døgndosis += d.getAntal();
         }
-
         return døgndosis;
     }
 
@@ -48,4 +36,7 @@ public class DagligFast extends Ordination {
         return "Daglig Fast";
     }
 
+    public Dosis[] getDoser() {
+        return dosis;
+    }
 }
