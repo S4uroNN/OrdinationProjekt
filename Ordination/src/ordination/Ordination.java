@@ -9,6 +9,7 @@ public abstract class Ordination {
 
     // TODO Link til Laegemiddel
     //Constructor
+    //test
     public Ordination(LocalDate startDen, LocalDate slutDen){
         this.startDen = startDen;
         this.slutDen = slutDen;
