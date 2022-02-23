@@ -22,7 +22,8 @@ public class PN extends Ordination {
      * @return
      */
     public boolean givDosis(LocalDate givesDen) {
-            if ((givesDen.isEqual(getStartDen()) || givesDen.isAfter(getStartDen())) && (givesDen.isEqual(getSlutDen()) || givesDen.isBefore(getSlutDen()))) {
+            if ((givesDen.isEqual(getStartDen()) || givesDen.isAfter(getStartDen())) &&
+                    (givesDen.isEqual(getSlutDen()) || givesDen.isBefore(getSlutDen()))) {
                 givetDosis.add(givesDen);
                 return true;
             }
@@ -37,7 +38,7 @@ public class PN extends Ordination {
 
     @Override
     public String getType() {
-        return null;
+        return "PN";
     }
 
 
