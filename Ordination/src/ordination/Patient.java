@@ -7,8 +7,6 @@ public class Patient {
     private String navn;
     private double vaegt;
 
-    // TODO: Link til Ordination
-
     private final ArrayList<Ordination> ordinations = new ArrayList<>();
 
     public Patient(String cprnr, String navn, double vaegt) {
