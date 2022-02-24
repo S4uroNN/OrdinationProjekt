@@ -32,7 +32,7 @@ public class PN extends Ordination {
 
     public double doegnDosis() {
         double doegnDosis = 0;
-        doegnDosis = samletDosis()/ (ChronoUnit.DAYS.between(givetDosis.get(0),givetDosis.get(givetDosis.size()-1))+1);
+        doegnDosis = samletDosis() / antalDage();
         return doegnDosis;
     }
 
