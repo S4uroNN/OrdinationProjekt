@@ -13,7 +13,7 @@ public class DagligFast extends Ordination {
         dosis[0] = new Dosis(LocalTime.of(8, 0), morgen);
         dosis[1] = new Dosis(LocalTime.of(12, 0), middag);
         dosis[2] = new Dosis(LocalTime.of(18, 0), aften);
-        dosis[3] = new Dosis(LocalTime.of(0, 0), nat);
+        dosis[3] = new Dosis(LocalTime.of(23, 59), nat);
 
     }
 
