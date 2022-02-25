@@ -1,4 +1,4 @@
-package test;
+package Test;
 
 import ordination.DagligFast;
 import ordination.Dosis;
