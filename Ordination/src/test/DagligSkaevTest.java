@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import ordination.DagligSkaev;
 import org.junit.Test;
