@@ -100,7 +100,7 @@ public class Controller {
      * Pre: ordination og dato er ikke null
      */
     public void ordinationPNAnvendt(PN ordination, LocalDate dato) {
-        if (dato.isAfter(ordination.getSlutDen())) {
+        if (dato.isAfter(ordination.getSlutDen()) || dato.isBefore(ordination.getStartDen())) {
             throw new IllegalArgumentException("Dato for ordination  er overskredet");
         } else {
             ordination.givDosis(dato);
