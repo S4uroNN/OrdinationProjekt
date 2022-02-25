@@ -3,6 +3,7 @@ package test;
 import com.sun.source.tree.AssertTree;
 import controller.Controller;
 import ordination.Laegemiddel;
+import ordination.PN;
 import ordination.Patient;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,8 +25,16 @@ public class ControllerTest {
 
     @Test
     public void ordinationPNAnvendt() {
+        Laegemiddel laegemiddel=new Laegemiddel("Acetylsalicylsyre", 0.1, 0.15, 0.16, "Styk");
+        Patient patient=new Patient("121256-0512", "Jane Jensen", 63.4);
+        PN pn = new PN(LocalDate.of(2022,02,23),LocalDate.of(2022,02,24),2);
+        pn.setLaegemiddel(laegemiddel);
+        patient.addOrdination(pn);
 
-
+        Exception exception = assertThrows(IllegalArgumentException.class,() ->{
+            controller.ordinationPNAnvendt(pn,LocalDate.of(2022,02,25));
+        });
+        assertEquals("Dato for ordination  er overskredet",exception.getMessage());
     }
 
     @Test
