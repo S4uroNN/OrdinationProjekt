@@ -25,6 +25,7 @@ public class DagligSkaev extends Ordination {
         double døgndosis = 0;
         for(Dosis d : doser){
             døgndosis += d.getAntal();
+
         }
         return døgndosis;
     }
